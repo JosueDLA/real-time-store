@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace RealTimeProducts.Controllers
 {
-    public class ProductsController : Controller
+    public class ProductController : Controller
     {
-        // GET: Products
+        // GET: Product
         public ActionResult Index()
         {
             return View();

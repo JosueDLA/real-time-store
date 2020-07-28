@@ -28,8 +28,7 @@ This project uses SignalR to create a real-time web application with ASP.NET MVC
 To display products it uses DataTables for pagintation, and bootbox for displaying on screen messages.
 
 ## Enable SignalR
-Startup.cs
-
+1. Startup.cs
 <div class="labelHolder">C#</div>
 
 
@@ -48,3 +47,4 @@ Startup.cs
               }
           }
     }
+

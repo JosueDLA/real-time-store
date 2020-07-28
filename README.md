@@ -6,6 +6,7 @@ Product section of store that updates in real time.
 * SignalR
 * Bootbox
 * DataTables
+* Entity Framework
 
 ## Setup
 **SignalR**
@@ -21,6 +22,12 @@ Product section of store that updates in real time.
 **DataTables**
 ```sh
 > Install-Package jquery.DataTables -version:1.10.11
+```
+
+**Entity Framework**
+```sh
+> Enable-Migrations
+> Add-Migration [ModelName]
 ```
 
 ## Overview

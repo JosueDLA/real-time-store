@@ -32,18 +32,19 @@ Startup.cs
 
 <div class="labelHolder">C#</div>
 
-  using Microsoft.Owin;
-  using Owin;
 
-  [assembly: OwinStartupAttribute(typeof(RealTimeProducts.Startup))]
-  namespace RealTimeProducts
-  {
-      public partial class Startup
+      using Microsoft.Owin;
+      using Owin;
+
+      [assembly: OwinStartupAttribute(typeof(RealTimeProducts.Startup))]
+      namespace RealTimeProducts
       {
-          public void Configuration(IAppBuilder app)
+          public partial class Startup
           {
-              app.MapSignalR();
-              ConfigureAuth(app);
+              public void Configuration(IAppBuilder app)
+              {
+                  app.MapSignalR();
+                  ConfigureAuth(app);
+              }
           }
-      }
-  }
+    }

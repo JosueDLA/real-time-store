@@ -31,7 +31,6 @@ To display products it uses DataTables for pagintation, and bootbox for displayi
 1. Startup.cs
 <div class="labelHolder">C#</div>
 
-
       using Microsoft.Owin;
       using Owin;
 
@@ -46,5 +45,28 @@ To display products it uses DataTables for pagintation, and bootbox for displayi
                   ConfigureAuth(app);
               }
           }
-    }
+      }
 
+2. _Layout.cshtml
+<div class="labelHolder">C#</div>
+
+      @Scripts.Render("~/bundles/lib")
+      <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+      <script src="~/signalr/js"></script>
+      @RenderSection("scripts", required: false)
+      
+3. index.cshtml (Product)
+<div class="labelHolder">C#</div>
+
+        $.connection.hub.start()
+            .done(function () {
+                console.log("SignalR: Connected")
+            })
+            .fail(function () {
+                alert("Error!")
+            });
+
+        $.connection.myHub.client.announce = function (message) {
+            console.log(message);
+            location.reload();
+        }

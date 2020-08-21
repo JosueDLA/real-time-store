@@ -55,7 +55,7 @@ To display products it uses DataTables for pagintation, and bootbox for displayi
       }
 
 2. _Layout.cshtml
-<div class="labelHolder">C#</div>
+<div class="labelHolder">JavaScript</div>
 
       @Scripts.Render("~/bundles/lib")
       <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
@@ -63,7 +63,7 @@ To display products it uses DataTables for pagintation, and bootbox for displayi
       @RenderSection("scripts", required: false)
       
 3. index.cshtml (Product)
-<div class="labelHolder">C#</div>
+<div class="labelHolder">JavaScript</div>
 
         $.connection.hub.start()
             .done(function () {

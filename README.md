@@ -34,6 +34,8 @@ Product section of store that updates in real time.
 This project uses SignalR to create a real-time web application with ASP.NET MVC5. The product section updates every time a product is deleted.
 To display products it uses DataTables for pagintation, and bootbox for displaying on screen messages.
 
+![Fail2Ban](https://josuedla.github.io/assets/images/project02/pic02.PNG)
+
 ## Enable SignalR
 1. Startup.cs
 <div class="labelHolder">C#</div>
